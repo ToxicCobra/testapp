@@ -17,6 +17,12 @@ spec:
         image: ghcr.io/toxiccobra/testapp:1.2.2
         ports:
         - containerPort: 5000
+        env:
+        - name: KUBEMQ_SVC
+          valueFrom:
+            configMapKeyRef:
+              name: kubemq-config
+              key: KUBEMQ_SVC
 ---
 apiVersion: v1
 kind: Service
