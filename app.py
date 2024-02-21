@@ -8,7 +8,7 @@ app = Flask(__name__)
 def publish_event_to_kubemq(channel, body):
     event = Event(
         channel=channel,
-        body=body.encode('UTF-8'),
+        body=body,
         store=False,
     )
 
