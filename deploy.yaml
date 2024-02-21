@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: testapp
-        image: ghcr.io/toxiccobra/testapp:1.2.3
+        image: ghcr.io/toxiccobra/testapp:1.2.4
         ports:
         - containerPort: 5000
         env:

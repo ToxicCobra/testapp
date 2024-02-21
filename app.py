@@ -2,13 +2,14 @@ from flask import Flask, request, jsonify
 from kubemq.events.lowlevel.event import Event
 from kubemq.events.lowlevel.sender import Sender
 import os
+import json
 
 app = Flask(__name__)
 
 def publish_event_to_kubemq(channel, body):
     event = Event(
         channel=channel,
-        body=body.encode('utf-8'),
+        body=json.dumps(body).encode('utf-8'),
         store=False,
     )
 
