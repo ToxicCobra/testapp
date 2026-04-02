@@ -8,4 +8,4 @@ kubemq==2.4.0
 MarkupSafe==2.1.5
 protobuf==4.25.3
 PyJWT==2.8.0
-Werkzeug==3.0.1
+Werkzeug==3.1.8
